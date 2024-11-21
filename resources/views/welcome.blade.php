@@ -11,28 +11,7 @@
 </head>
 
 <body>
-    <!-- @if (Route::has('login'))
-        <nav class="-mx-3 flex flex-1 justify-end">
-            @auth
-                <a href="{{ url('/home') }}"
-                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                    Dashboard
-                </a>
-            @else
-                <a href="{{ route('login') }}"
-                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                    Log in
-                </a>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}"
-                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                        Register
-                    </a>
-                @endif
-            @endauth
-        </nav>
-    @endif -->
     <header class="bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -53,6 +32,28 @@
                         <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="btn btn-warning text-white" href="#">Contact Us</a></li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <a href="{{ url('/home') }}" class="nav-link">
+                                        Dashboard
+                                    </a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a href="{{ route('login') }}" class="nav-link">
+                                        Log in
+                                    </a>
+                                </li>
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a href="{{ route('register') }}" class="nav-link">
+                                            Register
+                                        </a>
+                                    </li>
+                                @endif
+                            @endauth
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -66,14 +67,14 @@
                     <h1 class="display-4 text-white">Digital Marketing</h1>
                     <p class="text-white">Kami berfokus memasarkan dan mengembangkan produk herbal untuk kesehatan
                         dengan kualitas tinggi serta dilengkapi sertifikat BPOM.</p>
-                    <div class="d-flex gap-3">
+                    <!-- <div class="d-flex gap-3">
                         <a href="#" class="btn btn-outline-warning px-4">Career</a>
                         <a href="#" class="btn btn-warning px-4 text-white">About Us</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-6">
                     <div class="image-container">
-                        <img src="team-meeting.jpg" alt="Team Meeting" class="img-fluid rounded">
+                        <img src="" alt="Team Meeting" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
