@@ -64,7 +64,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1 class="display-4 text-white">Digital Marketing</h1>
+                    <h1 class="display-4 text-white">Digital Marketing TEST</h1>
                     <p class="text-white">Kami berfokus memasarkan dan mengembangkan produk herbal untuk kesehatan
                         dengan kualitas tinggi serta dilengkapi sertifikat BPOM.</p>
                     <!-- <div class="d-flex gap-3">
